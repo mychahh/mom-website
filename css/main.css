@@ -280,6 +280,31 @@ header.scrolled {
   opacity: 0.85 !important;
 }
 
+.footer-legal {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 0.75rem;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-legal a {
+  color: #888;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: #D4521A;
+}
+
+.footer-legal span {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
 /* ── Mobile ─────────────────────────────────────────── */
 
 @media (max-width: 768px) {
