@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-weight: 500;
   color: #1A1A1A;
   background: #F2EEE8;
@@ -58,16 +58,15 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: transparent;
-  border-bottom: 0.5px solid transparent;
-  transition: backdrop-filter 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+  background: #F2EEE8;
+  border-bottom: 0.5px solid #C8C0B4;
+  transition: backdrop-filter 0.35s ease, background 0.35s ease;
 }
 
 header.scrolled {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  background: rgba(242, 238, 232, 0.92);
-  border-bottom-color: #C8C0B4;
+  background: rgba(242, 238, 232, 0.96);
 }
 
 .nav-inner {
@@ -84,13 +83,9 @@ header.scrolled {
   letter-spacing: 0.16em;
   display: inline-flex;
   align-items: center;
-  color: #ffffff;
+  color: #1E1E1E;
   text-decoration: none;
   transition: color 0.35s ease;
-}
-
-header.scrolled .brand {
-  color: #1A1A1A;
 }
 
 .brand .dot {
@@ -104,29 +99,17 @@ header.scrolled .brand {
 }
 
 .nav-links a {
-  color: rgba(255, 255, 255, 0.72);
+  color: #666;
   font-size: 0.9rem;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #ffffff;
-}
-
-.nav-links a.active {
-  color: #ffffff;
-}
-
-header.scrolled .nav-links a:not(.nav-button) {
-  color: #666;
-}
-
-header.scrolled .nav-links a:not(.nav-button):hover {
   color: #1A1A1A;
 }
 
-header.scrolled .nav-links a.active:not(.nav-button) {
+.nav-links a.active {
   color: #1A1A1A;
 }
 
@@ -161,13 +144,9 @@ header.scrolled .nav-links a.active:not(.nav-button) {
   display: block;
   width: 22px;
   height: 1.5px;
-  background: #ffffff;
+  background: #1E1E1E;
   border-radius: 2px;
   transition: background 0.35s ease;
-}
-
-header.scrolled .hamburger span {
-  background: #1A1A1A;
 }
 
 /* ── Fade-up animation ──────────────────────────────── */

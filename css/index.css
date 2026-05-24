@@ -7,7 +7,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: #151515;
+  background: linear-gradient(135deg, #1E2426 0%, #2A2F32 100%);
 }
 
 .hero-canvas {
@@ -47,6 +47,16 @@
   gap: 0;
 }
 
+.hero-visual {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 960px) {
+  .hero-visual {
+    display: none;
+  }
+}
+
 .hero-copy {
   color: rgba(255, 255, 255, 0.55);
   font-size: 1rem;
@@ -73,10 +83,8 @@
 
 /* ── Ticker / Marquee ─────────────────────────────────── */
 
-.ticker {
-  background: #1E1E1E;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+.ticker-wrap {
+  background: #D4521A;
   overflow: hidden;
   padding: 0.75rem 0;
 }
@@ -89,9 +97,9 @@
 
 .ticker-track span {
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
   white-space: nowrap;
 }
 
@@ -99,11 +107,11 @@
   text-transform: uppercase;
   letter-spacing: 0.16em !important;
   font-size: 0.72rem !important;
-  color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .ticker-sep {
-  color: #D4521A !important;
+  color: rgba(255, 255, 255, 0.5) !important;
   font-size: 0.7rem !important;
 }
 
