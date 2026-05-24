@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo buchen – M·O·M Lead-Maschine</title>
+  <meta name="description" content="Kostenloses Erstgespräch buchen. 30 Minuten — wir zeigen dir die Lead-Maschine live und analysieren deinen aktuellen Lead-Kanal.">
+  <meta property="og:title" content="Demo buchen – M·O·M Lead-Maschine">
+  <meta property="og:description" content="30 Minuten. Wir zeigen dir die Demo live und analysieren deinen Lead-Kanal — konkret, mit Zahlen, ohne Verkaufsdruck.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/kontakt.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">M<span class="dot">·</span>O<span class="dot">·</span>M</a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="leistungen.html">Das Paket</a>
+        <a href="projekte.html">Referenzen</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" class="nav-button">Demo buchen</a>
+      </nav>
+      <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="page-hero fade-up visible" aria-label="Kontakt">
+      <div>
+        <p class="eyebrow">Erstgespräch</p>
+        <h1>30 Minuten.<br>Keine Floskeln.</h1>
+      </div>
+      <div>
+        <p class="page-copy">Wir schauen uns deinen aktuellen Lead-Kanal an und zeigen dir, was mit der Lead-Maschine realistisch möglich ist — konkret, mit Zahlen. Kein Pitch, keine Präsentation. Nur das, was für dich funktioniert.</p>
+      </div>
+    </section>
+
+    <div class="contact-layout fade-up">
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <div class="contact-form">
+          <div id="form-status" hidden aria-live="polite"></div>
+          <!--
+            Web3Forms-Endpoint: kostenloses Konto auf web3forms.com erstellen,
+            dann den access_key aus dem Dashboard hier einsetzen.
+            TODO: access_key vor Go-Live eintragen
+          -->
+          <form method="POST" action="https://api.web3forms.com/submit" novalidate>
+            <input type="hidden" name="access_key" value="TODO-web3forms-access-key">
+            <input type="hidden" name="subject" value="Neue Demo-Anfrage — M·O·M">
+            <input type="hidden" name="from_name" value="M·O·M Kontaktformular">
+            <!-- Honeypot gegen Spam-Bots — muss leer bleiben -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <label>
+                <span class="label-text">Name <span class="required" aria-hidden="true">*</span></span>
+                <input
+                  type="text"
+                  name="kundenname"
+                  placeholder="Max Mustermann"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                >
+              </label>
+              <label>
+                <span class="label-text">E-Mail <span class="required" aria-hidden="true">*</span></span>
+                <input
+                  type="email"
+                  name="kunden_email"
+                  placeholder="max@beispiel.de"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                >
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span class="label-text">Unternehmen</span>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Musterbetrieb GmbH"
+                  autocomplete="organization"
+                >
+              </label>
+              <label>
+                <span class="label-text">Ich interessiere mich für</span>
+                <select name="service">
+                  <option value="">Bitte wählen…</option>
+                  <option value="lead-maschine">Komplettpaket (Webseite + Ads + KI)</option>
+                  <option value="info">Erstmal mehr Infos</option>
+                  <option value="sonstiges">Sonstiges</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="label-full">
+              <span class="label-text">Was ist dein größtes Problem bei der Lead-Generierung? <span class="required" aria-hidden="true">*</span></span>
+              <textarea
+                name="kunden_nachricht"
+                rows="5"
+                placeholder="z.B. &quot;Wir haben zu wenig Anfragen, die bisherigen Ads haben nichts gebracht, wir wissen nicht wie wir qualifizierte Kunden erreichen…&quot;"
+                required
+                aria-required="true"
+              ></textarea>
+            </label>
+
+            <label class="consent-label">
+              <input
+                type="checkbox"
+                name="zustimmung"
+                required
+                aria-required="true"
+              >
+              <span class="consent-text">
+                Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner Anfrage einverstanden. <span class="required" aria-hidden="true">*</span>
+              </span>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="submit-btn">Absenden</button>
+              <p class="form-note">* Pflichtfelder. Keine Weitergabe an Dritte.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- WhatsApp alternative -->
+        <div class="wa-alternative">
+          <p>Lieber direkt schreiben?</p>
+          <!-- TODO: WhatsApp-Nummer vor Go-Live einsetzen (Format: 4917XXXXXXXXX) -->
+          <a
+            href="https://wa.me/TODO?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20M%C2%B7O%C2%B7M%20Lead-Maschine."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-btn"
+            data-todo="wa-nummer"
+            aria-label="Direkt auf WhatsApp schreiben"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            Auf WhatsApp schreiben
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <aside class="contact-info" aria-label="Kontaktinformationen">
+        <div class="info-block">
+          <h3>Schreib uns</h3>
+          <a href="mailto:info@mom-leads.de" class="info-link">info@mom-leads.de</a>
+          <p class="info-hint">Wir antworten innerhalb von 24 Stunden</p>
+        </div>
+        <div class="info-block">
+          <h3>Standort</h3>
+          <p>Heilbronn</p>
+          <p class="info-hint">Baden-Württemberg, Deutschland</p>
+        </div>
+        <div class="info-block">
+          <h3>Erstgespräch</h3>
+          <p>Kostenlos & unverbindlich</p>
+          <p class="info-hint">30 Min. per Video — kein Vor-Ort-Termin nötig</p>
+        </div>
+        <div class="info-block">
+          <h3>Termin direkt buchen</h3>
+          <!-- TODO: Cal.com-Account erstellen (cal.com, kostenlos) und Link hier einsetzen -->
+          <a href="#" class="info-link" data-todo="cal-link" aria-label="Kalender-Link folgt">Kalender öffnen →</a>
+          <p class="info-hint">Alternative: Formular links ausfüllen</p>
+        </div>
+        <div class="info-block info-block--highlight">
+          <p>Wir nehmen nur Kunden an, bei denen das Paket wirklich passt. Wenn wir nach dem Gespräch sehen, dass es nicht passt, sagen wir das direkt.</p>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer fade-up">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">M<span class="dot">·</span>O<span class="dot">·</span>M</a>
+          <p>Done-For-You Lead-Maschine<br>für den deutschen Mittelstand.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="leistungen.html">Das Paket</a>
+          <a href="projekte.html">Referenzen</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <a href="mailto:info@mom-leads.de">info@mom-leads.de</a>
+          <!-- TODO: WhatsApp-Nummer vor Go-Live einsetzen (Format: 4917XXXXXXXXX) -->
+          <a href="https://wa.me/TODO" target="_blank" rel="noopener noreferrer" data-todo="wa-nummer">WhatsApp schreiben</a>
+          <p>Heilbronn, Deutschland</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 M·O·M — Michael Massa</p>
+        <a href="kontakt.html" class="footer-cta">Demo buchen →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

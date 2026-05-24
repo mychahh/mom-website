@@ -1,0 +1,573 @@
+/* ── Status Banner ────────────────────────────────────── */
+
+.status-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(212, 82, 26, 0.06);
+  border: 0.5px solid rgba(212, 82, 26, 0.2);
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D4521A;
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.status-banner p {
+  font-size: 0.875rem;
+  color: #D4521A;
+  margin: 0;
+}
+
+/* ── Project Grid ─────────────────────────────────────── */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.project-card {
+  border: 0.5px solid #C8C0B4;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.project-card--planned {
+  background: #FAFAF8;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #D4521A;
+  background: rgba(212, 82, 26, 0.08);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.project-status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.project-status--live {
+  background: rgba(34, 139, 34, 0.08);
+  color: #1e7e1e;
+}
+
+.project-status--planned {
+  background: rgba(26, 26, 26, 0.06);
+  color: #777;
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.project-card p {
+  font-size: 0.875rem;
+  color: #777;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 0.5px solid #F0EBE4;
+}
+
+.project-meta span {
+  font-size: 0.78rem;
+  color: #bbb;
+}
+
+/* ── Waitlist Section ─────────────────────────────────── */
+
+.waitlist-section {
+  border: 0.5px solid #C8C0B4;
+  border-radius: 4px;
+  background: #1A1A1A;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.waitlist-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.waitlist-text h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+}
+
+.waitlist-text p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.65;
+  max-width: 480px;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 0;
+  max-width: 420px;
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1;
+  border: none;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.waitlist-form input[type="email"]:focus {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.waitlist-form input[type="email"]:disabled {
+  opacity: 0.55;
+}
+
+.waitlist-btn {
+  background: #D4521A !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0.85rem 1.25rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  white-space: nowrap;
+  transition: opacity 0.2s ease !important;
+}
+
+.waitlist-btn:hover {
+  opacity: 0.85 !important;
+}
+
+.waitlist-btn:disabled {
+  background: #1A1A1A !important;
+  border: 0.5px solid rgba(255,255,255,0.2) !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+.waitlist-note {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+/* ── Projects CTA ─────────────────────────────────────── */
+
+.projects-cta {
+  border: 0.5px solid #C8C0B4;
+  border-radius: 4px;
+  background: #F7F4EF;
+  padding: 2.5rem;
+  margin-bottom: 0;
+}
+
+.projects-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.projects-cta h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin: 0 0 0.4rem;
+}
+
+.projects-cta p {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.projects-cta-btn {
+  background: #D4521A !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  padding: 0.85rem 1.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  white-space: nowrap;
+  transition: opacity 0.2s ease !important;
+}
+
+.projects-cta-btn:hover {
+  opacity: 0.85 !important;
+  color: #ffffff !important;
+}
+
+/* ── Concept Status Variant ───────────────────────────── */
+
+.project-status--concept {
+  background: rgba(26, 26, 26, 0.06);
+  color: #999;
+  font-style: italic;
+}
+
+/* ── Concept KPIs ─────────────────────────────────────── */
+
+.concept-kpis {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-top: 0.5px solid #F0EBE4;
+  border-bottom: 0.5px solid #F0EBE4;
+}
+
+.concept-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.concept-kpi-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.concept-kpi-label {
+  font-size: 0.72rem;
+  color: #aaa;
+  letter-spacing: 0.02em;
+}
+
+/* ── Slots Counter ────────────────────────────────────── */
+
+.slots-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(212, 82, 26, 0.06);
+  border: 0.5px solid rgba(212, 82, 26, 0.2);
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.slot {
+  width: 28px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.slot--open {
+  background: rgba(212, 82, 26, 0.18);
+  border: 0.5px solid rgba(212, 82, 26, 0.3);
+}
+
+.slot--taken {
+  background: #D4521A;
+}
+
+.slots-counter p {
+  font-size: 0.875rem;
+  color: #D4521A;
+  margin: 0;
+}
+
+/* ── Founding Offer ───────────────────────────────────── */
+
+.founding-offer {
+  background: #1A1A1A;
+  border-radius: 4px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.founding-offer h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 1.75rem;
+}
+
+.founding-offer-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.5px 1fr;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.founding-offer-divider {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 2rem;
+}
+
+.founding-offer-col {
+  padding-right: 2rem;
+}
+
+.founding-offer-col:last-child {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+
+.founding-col-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 1rem;
+}
+
+.feature-list--light li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.feature-list--light li::before {
+  color: #D4521A;
+}
+
+.founding-offer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 1.75rem;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.founding-offer-footer p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 420px;
+}
+
+.founding-offer-btn {
+  background: #D4521A !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  padding: 0.85rem 1.5rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  display: inline-block !important;
+  white-space: nowrap;
+  transition: opacity 0.2s ease !important;
+}
+
+.founding-offer-btn:hover {
+  opacity: 0.85 !important;
+  color: #ffffff !important;
+}
+
+/* ── Concepts Section ─────────────────────────────────── */
+
+.concepts-section {
+  margin-bottom: 3rem;
+}
+
+.concepts-header {
+  margin-bottom: 1.5rem;
+}
+
+.concepts-header h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin: 0 0 0.4rem;
+}
+
+.concepts-header p {
+  font-size: 0.875rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.concepts-disclaimer {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin: 1.25rem 0 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ── Update Notice ────────────────────────────────────── */
+
+.update-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(26, 26, 26, 0.04);
+  border: 0.5px solid #E0D8D0;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.update-notice p {
+  font-size: 0.82rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ── Screen reader only ───────────────────────────────── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .founding-offer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founding-offer-divider {
+    display: none;
+  }
+
+  .founding-offer-col {
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .founding-offer-col:last-child {
+    padding-left: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .founding-offer-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .founding-offer-btn {
+    width: 100%;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .waitlist-section,
+  .projects-cta {
+    padding: 2rem 1.5rem;
+  }
+
+  .waitlist-form {
+    max-width: 100%;
+    flex-direction: column;
+    border: none;
+  }
+
+  .waitlist-form input[type="email"] {
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 4px !important;
+  }
+
+  .waitlist-btn {
+    border-radius: 4px !important;
+    text-align: center !important;
+  }
+
+  .projects-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-cta-btn {
+    width: 100%;
+    text-align: center !important;
+  }
+}
